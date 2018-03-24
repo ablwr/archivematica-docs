@@ -4,11 +4,14 @@
 Customization and automation
 ============================
 
-Some workflow and processing decisions can be made or viewed in the dashboard and
-others are created at the development level.
+*On this page*
 
-Resources for dashboard configuration
--------------------------------------
+* :ref:`Configuring Archivematica using the dashboard <config-using-dashboard>`
+
+.. _config-using-dashboard:
+
+Configuring Archivematica using the dashboard
+---------------------------------------------
 
 The Preservation Planning tab allows editing or addition of commands for
 identification, tools, characterization, event detail, extraction, normalization,
@@ -22,8 +25,8 @@ Basic workflow configuration is feasible by administrators or end-users in the
 Resources for development configuration
 ---------------------------------------
 
-When processing a SIP or transfer, you may automate workflow choices by putting 
-a ``processingMCP.xml`` file into the root directory of a SIP/transfer. See 
+When processing a SIP or transfer, you may automate workflow choices by putting
+a ``processingMCP.xml`` file into the root directory of a SIP/transfer. See
 :ref:`Processing configuration <process-config>`.
 
 The MCP is the core of the Archivematica system. It controls the various
@@ -36,14 +39,14 @@ wiki:
 * `Basic MCP configuration <https://wiki.archivematica.org/MCPServer#Config_File>`_
 
 For other development resources, please see the
-`Development <https://www.archivematica.org/wiki/Development>`_ section of our 
+`Development <https://www.archivematica.org/wiki/Development>`_ section of our
 wiki.
 
 Resources for antivirus configuration
 -------------------------------------
 
-Antivirus can be customized through various operating system environment 
-variables rather than via the Dashboard. See :ref:`Antivirus Administration 
-<antivirus-admin>` 
+Antivirus can be customized through various operating system environment
+variables rather than via the Dashboard. See :ref:`Antivirus Administration
+<antivirus-admin>`
 
 :ref:`Back to the top <customization>`
