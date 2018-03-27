@@ -6,21 +6,40 @@ Customization and automation
 
 *On this page*
 
-* :ref:`Configuring Archivematica using the dashboard <config-using-dashboard>`
+* :ref:`Configuring microservices using the dashboard <config-using-dashboard>`
+* :ref:`Preservation planning configuration <config-using-fpr>`
+* :ref:`Antivirus configuration <antivirus-config>`
+* :ref:`Resources for development configuration <development-config>`
 
 .. _config-using-dashboard:
 
-Configuring Archivematica using the dashboard
+Configuring microservices using the dashboard
 ---------------------------------------------
+
+It is possible for administrators or end-users to automate almost all of
+Archivematica's microservices by preconfiguring choices using the
+:ref:`Administration tab <dashboard-admin>` of the dashboard.
+
+.. _config-using-fpr:
+
+Preservation planning configuration
+-----------------------------------
 
 The Preservation Planning tab allows editing or addition of commands for
 identification, tools, characterization, event detail, extraction, normalization,
 transcription, validation and verification. Please see the
 :ref:`Format Policy Registry (FPR) documentation <fpr:index>` for instruction.
 
-Basic workflow configuration is feasible by administrators or end-users in the
-:ref:`Administration tab <dashboard-admin>` of the dashboard.
+.. _antivirus-config:
 
+Antivirus configuration
+-----------------------
+
+Antivirus can be customized through various operating system environment
+variables rather than via the Dashboard. See :ref:`Antivirus Administration
+<antivirus-admin>`
+
+.. _development-config:
 
 Resources for development configuration
 ---------------------------------------
@@ -41,12 +60,5 @@ wiki:
 For other development resources, please see the
 `Development <https://www.archivematica.org/wiki/Development>`_ section of our
 wiki.
-
-Resources for antivirus configuration
--------------------------------------
-
-Antivirus can be customized through various operating system environment
-variables rather than via the Dashboard. See :ref:`Antivirus Administration
-<antivirus-admin>`
 
 :ref:`Back to the top <customization>`

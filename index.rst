@@ -253,7 +253,7 @@ Installation and setup
 
 * :ref:`Installing Archivematica <installation>`
 * :ref:`Upgrading Archivematica <upgrade>`
-* :ref:`Customizatio and automation <customization>`
+* :ref:`Customization and automation <customization>`
 * :ref:`Setting up integrations <integrations>`
 * :ref:`Storage Service <storageservice:administrators>`
 * :ref:`Format Policy Registry (FPR) <fpr:index>`

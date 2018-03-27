@@ -7,8 +7,8 @@ Upgrade from Archivematica |previous_version|.x to |release|
 *On this page:*
 
 * :ref:`Create a backup <create-backup>`
-* :ref:`Upgrade Ubuntu Package Install <upgrade-ubuntu>`
-* :ref:`Upgrade CentOS/Redhat Package Install <upgrade-centos>`
+* :ref:`Upgrade Ubuntu package install <upgrade-ubuntu>`
+* :ref:`Upgrade CentOS/Redhat package install <upgrade-centos>`
 * :ref:`Upgrade in indexless mode <upgrade-indexless>`
 
 .. note::
@@ -20,25 +20,25 @@ Upgrade from Archivematica |previous_version|.x to |release|
 Create a backup
 ---------------
 
-Before starting any upgrade procedure on a production system, it is prudent to
-back up your system. If you are using a virtual machine, take a snapshot of it
-before making any changes. Alternatively, back up the file systems being used
-by your system. Exact procedures for updating will depend on your local
-installation. At a minimum you should make backups of:
+Before starting any upgrade procedure on a production system, we strongly
+recommend backing up your system. If you are using a virtual machine, take a
+snapshot of it before making any changes. Alternatively, back up the file
+systems being used by your system. Exact procedures for updating will depend on
+your local installation. At a minimum you should make backups of:
 
 * The Storage Service SQLite (or MySQL) database
 * The dashboard MySQL database
 
-A simple example of backing up these two databases:
+This is a simple example of backing up these two databases:
 
 .. code:: bash
 
    sudo cp /var/archivematica/storage-service/storage.db ~/storage_db_backup.db
    mysqldump -u root -p MCP > ~/am_backup.sql
 
-If you do not have a password set for the root user in mysql, you can take out
+If you do not have a password set for the root user in MySQL, you can take out
 the '-p' portion of that command. If there is a problem during the upgrade
-process, you can restore your mysql database from this backup and try the
+process, you can restore your MySQL database from this backup and try the
 upgrade again.
 
 .. _upgrade-ubuntu:
@@ -90,7 +90,7 @@ Upgrade on Ubuntu
 6. Update Archivematica. During the update process you may be asked about
    updating configuration files. Choose to accept the maintainers versions. You
    will also be asked about updating the database - say 'ok' to each of those
-   steps. If you have set a password for the root mysql database user, enter it
+   steps. If you have set a password for the root MySQL database user, enter it
    when prompted. It is better to update the dashboard before updating the mcp
    components.
 
@@ -159,7 +159,7 @@ tab.
    to perform certain maintenance tasks. One of those tools is used to rebuild
    the Transfer index in Elasticsearch, which is used by the different backlog
    tools such as the new Appraisal Tab. Currently this must be installed using
-   git. These instructions will be updated when a packaged version is available.
+   git. These instructions will be updated if a packaged version becomes available.
    See the `devtools repo`_ for more details.
 
 
@@ -172,7 +172,7 @@ tab.
        cd archivematica-devtools
        make install
 
-2. Confirm Location of Transfer Backlog
+2. Confirm location of transfer backlog
 
    You need to know the path to the Transfer Backlog Location. The default
    path is '/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog'.
@@ -183,7 +183,7 @@ tab.
    - copy the value in the column labelled 'path' (there should be only one row)
 
 
-3. Rebuild Transfer Index
+3. Rebuild transfer index
 
    Using the path you confirmed above, replace the text '/path/to/transfers'
    with the correct path for your system.

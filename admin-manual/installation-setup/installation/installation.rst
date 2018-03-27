@@ -8,8 +8,8 @@ Installing Archivematica
 
 * :ref:`Overview <overview>`
 * :ref:`Technical requirements <tech-requirements>`
-* :ref:`Installation instructions <instructions>`
-* :ref:`Advanced <advanced>`
+* :ref:`Instructions for new installations <instructions>`
+* :ref:`Advanced installation options <advanced>`
 
 .. _overview:
 
@@ -22,24 +22,22 @@ possible deployment configurations.
 
 These instructions are designed to get you up and running as quickly as
 possible, even if you are not familiar the various tools and applications that
-are bundled into Archivematica.
+are bundled into Archivematica. Experience with the Linux command line is
+helpful, and to support a running production system it should be considered a
+requirement.
 
-Experience with the Linux command line is helpful, and to support a running
-production system it should be considered a requirement.
-
-Don't be afraid to ask for help if you get stuck, or if you don't understand
-some part of the instructions. The `Archivematica google group`_ is a good place
-to look for assistance.
+If you need assistance or clarification regarding the installation instructions,
+the `Archivematica google group`_ is a good place ask questions.
 
 .. note:: For testing purposes, you may find it easier to install on a virtual
    machine using Vagrant. See the :ref:`Quick Start Guide <quick-start-install>`
 
 .. _tech-requirements:
 
-Technical Requirements
+Technical requirements
 ======================
 
-Operating System
+Operating system
 ----------------
 
 Archivematica |release| installation instructions are provided here for the
@@ -121,8 +119,8 @@ Minimum hardware requirements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For small-scale functionality testing using small collections (transfers with 100
-files or less, files 1 GB or smaller), we recommend the following minimum hardware
-requirements:
+files or less, total file size 1 GB or smaller), we recommend the following minimum
+hardware requirements:
 
 * Processor: 2 CPU cores
 * Memory: 2GB+
@@ -163,17 +161,25 @@ audio-visual material requires more processing power than images or documents.
 Instructions for new installations
 ==================================
 
-Instructions are provided for the following installation environments:
+Archivematica can be installed using packages or Ansible scripts in either
+CentOS/Redhat or Ubuntu environments. It can also be installed using Docker.
+At this time, installation instructions are provided for officially tested and
+supported installation environments:
 
-* :ref:`Manual install of OS packages on Ubuntu <install-ubuntu>`
+* :ref:`Automated install from Github on Ubuntu (14.04 and 16.04) <ansible-git-ubuntu>`
+* :ref:`Manual install of OS packages on Ubuntu (14.04 and 16.04) <install-ubuntu>`
 * :ref:`Manual install of OS packages on CentOS/Redhat <install-pkg-centos>`
-* :ref:`Automated install from Github on Ubuntu <ansible-git-ubuntu>`
 
-Other combinations work, but are not covered in this documentation. Please
-see the `ansible-archivematica-src`_ repo, the `deploy-pub`_ repo, and ask on the
+Installing Archivematica using :ref:`Docker <docker>` is not officially
+supported for production deployments. However, it is the preferred development
+environment for those who work on Archivematica's code.
+
+For more information about installation environments, please see the
+`ansible-archivematica-src`_ repo, the `deploy-pub`_ repo, and ask on the
 `archivematica-tech`_ mailing list for more details.
 
-If you are upgrading, please see the :ref:`upgrading instructions <upgrade>`.
+If you are upgrading from a previous version of Archviematica, please see the
+:ref:`upgrading instructions <upgrade>`.
 
 .. _advanced:
 
@@ -193,3 +199,4 @@ individual user. We have documented some common advanced installation setups.
 .. _`deploy-pub`: https://github.com/artefactual/deploy-pub
 .. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src
 .. _`Archivematica google group`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
+.. _`docker`: https://github.com/artefactual-labs/am/tree/master/compose
